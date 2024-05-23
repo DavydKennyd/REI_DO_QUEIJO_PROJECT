@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+body {
+    margin: 0;
+    font-family: "Noto sans Display", sans-serif;
+    background-color: #f5f5f5;
+}
+
+.header-container {
+    background-color: #980000;
+    color: #ffffff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'nunito', sans-serif;
+}
+
+.logo {
+    font-size: 40px;
+    color: #f7fb2d;
+    font-family: "Holtwood One SC", serif;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form button:hover {
+    background-color: #777;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-button, .cart-button {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
+}
+
+.login-button:hover, .cart-button:hover {
+    background-color: #777;
+}
+
+.title {
+    margin: 50px 60px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.products-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.products-container {
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.products-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product {
+    text-align: center;
+    padding: 20px;
+}
+
+.product img {
+    width: 80%;
+    height: auto;
+    max-height: 200px;
+    margin-bottom: 20px;
+}
+
+.product-info, .product-info p, .btn-buy, .btn-add-cart {
+    font-family: 'Nunito', sans-serif;
+}
+
+.product-info {
+    padding: 10px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+.product-info p {
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-buy, .btn-add-cart {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-cart {
+    background-color: #007bff;
+}
+
+.btn-buy:hover, .btn-add-cart:hover {
+    background-color: #777;
+}
+
+footer {
+    background-color: #980000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+}
