@@ -166,6 +166,25 @@ body {
     background-color: #777;
 }
 
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: fadeinout 2s;
+  }
+  
+  @keyframes fadeinout {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }
+  
+
 footer {
     background-color: #980000;
     color: #ffffff;
