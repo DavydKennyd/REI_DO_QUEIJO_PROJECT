@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // Removido Navigate e adicionado useNavigate
 import './carrinho.css';
 
 const Carrinho = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [showMessage, setShowMessage] = useState(false);
+  const navigate = useNavigate(); // Utilizando useNavigate para obter a função de navegação
 
   useEffect(() => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -19,6 +21,20 @@ const Carrinho = () => {
 
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price, 0).toFixed(2);
+  };
+
+  const handleFinalizarCompra = () => {
+    const userLoggedIn = false;
+
+    if (!userLoggedIn) {
+      setShowMessage(true);
+      setTimeout(() => {
+        setShowMessage(false);
+        navigate('/login'); // Redirecionando para a tela de login usando useNavigate
+      }, 2000);
+    } else {
+      alert("Você precisa fazer login para finalizar a compra!");
+    }
   };
 
   return (
@@ -60,13 +76,18 @@ const Carrinho = () => {
             <span>R$ {calculateTotal()}</span>
           </div>
           <div className="checkout">
-            <button className="btn-finalizar">Finalizar Compra</button>
+            <button className="btn-finalizar" onClick={handleFinalizarCompra}>Finalizar Compra</button>
           </div>
         </div>
       </main>
       <footer>
         <p>&copy; 2024 Minha Loja. Todos os direitos reservados.</p>
       </footer>
+      {showMessage && (
+        <div className="floating-message">
+          <p>Para finalizar a compra, você precisa estar logado.</p>
+        </div>
+      )}
     </div>
   );
 };
