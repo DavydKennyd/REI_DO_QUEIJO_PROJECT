@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# O REI DO QUEIJO LOJA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice
+- [Visão Geral](#visão-geral)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Componentes](#componentes)
+  - [Cadastro](#cadastro)
+  - [Carrinho](#carrinho)
+  - [Login](#login)
+  - [Index](#index)
+- [Roteamento](#roteamento)
+- [Estilos](#estilos)
+- [Como Executar o Projeto](#como-executar-o-projeto)
+- [Dependências](#dependências)
 
-## Available Scripts
+## Visão Geral
+"Minha Loja" é um aplicativo de e-commerce desenvolvido utilizando React e React Router. O projeto possui funcionalidades para cadastro de usuários, login, exibição de produtos, adição de produtos ao carrinho e finalização de compras.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **React Router**: Biblioteca para gerenciar navegação e rotas no aplicativo React.
+- **CSS**: Utilizado para estilização dos componentes.
 
-### `npm start`
+## Componentes
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Cadastro
+- O componente de Cadastro é responsável por permitir que novos usuários se cadastrem no sistema.
+- Contém um formulário com campos para nome, usuário, email, senha e confirmação de senha.
+- Após o envio do formulário, uma função é acionada para realizar o cadastro e redirecionar o usuário para a página de login.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Carrinho
+- O componente Carrinho exibe os itens que o usuário adicionou ao carrinho de compras.
+- Permite que os usuários removam itens do carrinho e calcula o total da compra.
+- Verifica se o usuário está logado antes de permitir a finalização da compra, redirecionando para a página de login se necessário.
 
-### `npm test`
+### Login
+- O componente de Login autentica os usuários.
+- Contém um formulário para entrada de nome de usuário e senha.
+- Após a autenticação bem-sucedida, o usuário é redirecionado para a página do carrinho.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Index
+- O componente Index exibe os produtos disponíveis para compra.
+- Os produtos são listados com informações como nome, preço e descrição, além de botões para comprar ou adicionar ao carrinho.
+- Quando um produto é adicionado ao carrinho, ele é armazenado no localStorage.
 
-### `npm run build`
+## Roteamento
+- O roteamento do aplicativo é gerenciado pelo React Router.
+- As rotas definidas são:
+  - `/`: Página inicial que exibe os produtos (componente Index).
+  - `/login`: Página de login (componente Login).
+  - `/cadastro`: Página de cadastro (componente Cadastro).
+  - `/carrinho`: Página do carrinho de compras (componente Carrinho).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estilos
+- Os estilos são definidos em arquivos CSS específicos para cada componente (`cadastro.css`, `carrinho.css`, `login.css`, `style.css`).
+- Esses arquivos são importados nos respectivos componentes para aplicar as estilizações.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Como Executar o Projeto
+1. **Clone o repositório**: `git clone <URL-do-repositório>`
+2. **Instale as dependências**: `npm install`
+3. **Inicie o servidor de desenvolvimento**: `npm start`
+4. **Acesse o aplicativo no navegador**: `http://localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dependências
+- **React**: `^17.0.2`
+- **React Router DOM**: `^6.0.0`
+- **CSS**: Estilização dos componentes
 
-### `npm run eject`
+Para mais detalhes sobre as dependências, consulte o arquivo `package.json` do projeto.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Criador
+- **Davyd Kennyd**

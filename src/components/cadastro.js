@@ -7,10 +7,9 @@ const Cadastro = () => {
 
   const cadastrarUsuarios = (e) => {
     e.preventDefault();
-    // Adicione a lógica de cadastro aqui
-    // Por exemplo, uma requisição para o backend para criar um novo usuário
+    
     console.log('Usuário cadastrado com sucesso!');
-    navigate('/login'); // Redireciona para a página de login após o cadastro
+    navigate('/login'); 
   };
 
   return (

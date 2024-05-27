@@ -24,10 +24,10 @@ const Login = () => {
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();
-    // Verificar se existe um usuário com o username e id correspondentes
+    
     const user = users.find(user => user.username === username && user.id.toString() === password);
     if (user) {
-      // Login bem-sucedido, redirecionar para a página de carrinho
+      
       navigate('/carrinho');
     } else {
       // Credenciais inválidas, você pode exibir uma mensagem de erro ou tomar outra ação
