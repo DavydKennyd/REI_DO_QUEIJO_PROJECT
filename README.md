@@ -56,7 +56,7 @@
 - Esses arquivos são importados nos respectivos componentes para aplicar as estilizações.
 
 ## Como Executar o Projeto
-1. **Clone o repositório**: `git clone <URL-do-repositório>`
+1. **Clone o repositório**: `git clone https://github.com/DavydKennyd/REI_DO_QUEIJO_PROJECT.git`
 2. **Instale as dependências**: `npm install`
 3. **Inicie o servidor de desenvolvimento**: `npm start`
 4. **Acesse o aplicativo no navegador**: `http://localhost:3000`
